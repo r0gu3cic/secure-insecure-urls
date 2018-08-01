@@ -53,9 +53,9 @@ def noLoseEnds(path1):
 
 ##----------SCRIPT----------
 import os, re
-pathUrl=input('''Insert path to file with all urls
+pathUrl=input('''Insert path to text file (file included) with all urls
 which you want to sort out as secure and not secure
-(for example /home/yourname/Desktop)
+(for example /home/yourname/Desktop/url.txt)
 ''')
 pathSave=input('''Insert path to file in which
 you want to save secure and not secure urls
