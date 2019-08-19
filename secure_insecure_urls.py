@@ -1,8 +1,8 @@
 ###sorting function
 def checkthistxt (path,path1):
     ##open text file with urls
-    urlFile=open(path,'r')
-    opened=urlFile.read()
+    url_file=open(path,'r')
+    opened=url_file.read()
     print('''The file that contain urls in it looks like this:\n\n'''+opened+'\n')
     ##regex for http and https
     httporsreg=re.compile(r'''((http://|https://) #in urls there http:// or https://
@@ -17,17 +17,17 @@ def checkthistxt (path,path1):
     ##for loop goes through urls container
     for i in range (len(sites)):
         if sites[i][1]=='https://':#check first group of found urls
-            forPrint=sites[i][0]#container for https urls
+            for_print=sites[i][0]#container for https urls
             Note=open(path1+r'/secure_sites.txt','a')
-            Note.write(str(j)+'- '+forPrint+'\n')
+            Note.write(str(j)+'- '+for_print+'\n')
             j=j+1
             Note.close()
         ##same story here
         elif sites[i][1]=='http://':
-            forPrint=sites[i][0]
+            for_print=sites[i][0]
             ##this is just one time variable like the one above, the point is to write in another file
             Note=open(path1+r'/not_secure_sites.txt','a')
-            Note.write(str(k)+'- '+forPrint+'\n')
+            Note.write(str(k)+'- '+for_print+'\n')
             k=k+1
             Note.close()
     print('It is done...')
@@ -70,3 +70,4 @@ Y for Yes, N for No)\n''')
     elif answer=='N':
         no_lose_ends(path_save)
     break
+
